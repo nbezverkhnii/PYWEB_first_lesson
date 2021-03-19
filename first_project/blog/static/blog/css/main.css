@@ -1,0 +1,56 @@
+body {
+    background: darkslategray;
+}
+
+asaid {
+    float: left;
+    background: dimgray;
+    width: 20%;
+    padding: 2.5%;
+    height: 100vh;
+    color: #fff;
+    border-right: 5px solid #4d4d4d;
+}
+
+asaid img {
+  max-width: 50%;
+  float: left;
+  height: auto;
+}
+
+asaid .logo {
+    font-size: 20px;
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+asaid h3 {
+    color: #fff;
+    font-size: 28px;
+    margin-top: 100px;
+}
+
+asaid ul {list-style: none}
+
+asaid ul li {
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    display: block;
+    margin-top: 20px;
+    transition: all .6s ease;
+}
+
+asaid ul li:hover, aside ul a:hover {
+    color: burlywood;
+    text-decoration: none;
+    transform: scale(1.1);
+}
+
+main h1 {
+    color: white;
+}
+
+main p {
+    color: aquamarine;
+}
