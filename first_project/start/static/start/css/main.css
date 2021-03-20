@@ -54,3 +54,14 @@ main h1 {
 main p {
     color: aquamarine;
 }
+
+main div {
+    width: 200px;
+    background-color: powderblue;
+    position: center;
+}
+
+div h1, div p {
+    color: black;
+    position: center;
+}

@@ -25,7 +25,12 @@
     </asaid>
     <main>
         <h1>Главная страница</h1>
-        <p>Главная страница</p>
+            <div class="container">
+                {% for article in articles %}
+                    <h1>{{ article.title }}</h1>
+                    <p>{{ article.massage }}</p>
+                {% endfor %}
+            </div>
     </main>
 </body>
 </html>
