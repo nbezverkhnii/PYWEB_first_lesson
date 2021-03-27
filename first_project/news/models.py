@@ -12,6 +12,7 @@ class News(models.Model):
     massage = models.TextField(verbose_name='Текст')
     date_time = models.DateTimeField(auto_now_add=True, verbose_name='Время публикации')
     public = models.BooleanField(verbose_name='Опубликовано')
+    author = models.ForeignKey(User, related_name='news_authors', on_delete=models.PROTECT, blank=True)
 
     def __str__(self):
         return self.title
