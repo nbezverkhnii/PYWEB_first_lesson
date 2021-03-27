@@ -54,3 +54,15 @@ main h1 {
 main p {
     color: aquamarine;
 }
+
+main .features {
+    float: left;
+    color: white;
+    margin-top: 100px;
+    text-align: center;
+    width: 50%;
+}
+
+main .features h1 {font-size: 50px}
+
+main .features p {max-width: 300px; margin: 20px auto}
