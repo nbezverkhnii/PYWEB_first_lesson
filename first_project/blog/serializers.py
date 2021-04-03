@@ -1,8 +1,10 @@
 from datetime import datetime
-from rest_framework import serializers
-from django.contrib.auth.models import User
 
-from .models import Article
+from django.contrib.auth.models import User
+from rest_framework import serializers
+from rest_framework.serializers import Serializer, IntegerField
+
+from .models import Article, Comment
 
 
 class AuthorSerializer(serializers.ModelSerializer):
@@ -53,3 +55,27 @@ class ArticleEditorSerializer(serializers.ModelSerializer):
         fields = "__all__"
         read_only_fields = ['date_time', 'author', ]
 
+
+class QuerySerializer(Serializer):
+    limit = IntegerField(min_value=1, default=5, required=False)
+    offset = IntegerField(min_value=0, default=0, required=False)
+
+
+class CommentAddSerializer(serializers.ModelSerializer):
+    """ Добавление комментария """
+    author = AuthorSerializer(read_only=True)
+    article = OneArticleViewSerializer(read_only=True)
+
+    class Meta:
+        model = Comment
+        fields = "__all__"
+        read_only_fields = ['date_add', 'author', 'note']
+
+
+class CommentViewSerializer(serializers.ModelSerializer):
+    """
+
+    """
+    class Meta:
+        model = Comment
+        fields = '__all__'
